@@ -1,0 +1,129 @@
+@import "reset";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #F4F5F7;
+  color: #383e45;
+  font-size: 0.9rem;
+}
+
+li {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.app-title {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  padding: 10px 0;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 10%;
+  text-align: center;
+  min-height: 300px;
+  position: relative;
+}
+
+.btn {
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  width: 180px;
+  border-radius: 4px;
+  border: none;
+}
+
+// header
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #55c500;
+  padding: 0 10%;
+}
+
+#header ul {
+  display: flex;
+  padding: 10px;
+}
+
+#header li {
+  margin-left: 40px;
+  color: #fff;
+}
+
+// static_page
+.static-container {
+  margin-top: 120px;
+  padding: 60px 30px;
+  border: solid 2px #55c500;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.btn-area {
+  margin-top: 20px;
+}
+
+.btn-login {
+  background-color:#0033FF;
+  padding: 10px 20px;
+  margin-left: 30px;
+}
+
+.btn-signup {
+  background-color: #55c500;
+  padding: 10px 20px;
+}
+
+.btn-form-login {
+  background-color:#0033FF;
+  padding: 10px 20px;
+}
+
+// footer
+#footer {
+  width: 100%;
+  background-color: #2f3232;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10%;
+  position: absolute;
+  bottom: 0;
+}
+
+// sign_in sign_up
+.devise-frame {
+  background-color: #fff;
+  border-radius: 20px;
+  height: auto;
+  width: 600px;
+  margin: 60px auto 0 auto;
+  padding: 30px 40px;
+}
+
+.devise-title {
+  margin-bottom: 2rem;
+}
+
+.form {
+  border: 1px solid #383e45;
+  width: 40%;
+  margin-bottom: 1.5rem;
+}
