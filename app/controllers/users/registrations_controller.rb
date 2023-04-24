@@ -38,7 +38,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  # The path used after sign up.
+  def after_sign_up_path_for(_resource)
+    attendances_path
+  end
+
+  def after_update_path_for(_resource)
+    attendances_path
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params

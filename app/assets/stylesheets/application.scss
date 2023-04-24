@@ -97,6 +97,23 @@ li {
   padding: 10px 20px;
 }
 
+// attendance_index_page
+.attendance-area {
+  margin-top: 120px;
+  padding: 60px 30px;
+  border: solid 2px #55c500;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.current-month {
+  font-size: 2rem;
+}
+
+.current-time {
+  font-size: 1.5rem;
+}
+
 // footer
 #footer {
   width: 100%;
