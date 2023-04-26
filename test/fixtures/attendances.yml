@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  work_start_time: 2023-04-24 21:44:06
+  work_end_time: 2023-04-24 21:44:06
+  user: one
+
+two:
+  work_start_time: 2023-04-24 21:44:06
+  work_end_time: 2023-04-24 21:44:06
+  user: two

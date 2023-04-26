@@ -1,0 +1,23 @@
+<% provide(:title, 'Edit') %>
+
+<div class="devise-container">
+  <div class="devise-frame">
+    <%= form_with model: @attendance, local: true do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <h2>Edit Attendance</h2>
+
+      <div class="field">
+        <%= f.label :clock_in, '出勤時刻' %>
+        <%= f.datetime_field :clock_in_at, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :clock_out, '退勤時刻' %>
+        <%= f.datetime_field :clock_out_at, class: 'form-control' %>
+      </div>
+
+      <%= f.submit "更新", class: "btn btn-work" %>
+    <% end %>
+  </div>
+</div>
