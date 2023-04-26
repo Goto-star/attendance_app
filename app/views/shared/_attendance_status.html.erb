@@ -1,0 +1,22 @@
+<% @attendances.each do |attendance| %>
+  <tr>
+    <td class="user"><%= attendance.user.name %></td>
+    <td class="attendance_time"><%= attendance.work_start_time.strftime('%Y/%m/%d %H:%M:%S') %></td>
+    <% if attendance.work_end_time == nil %>
+      <td class="attendance_time"><%= attendance.work_end_time %></td>
+    <% else %>
+      <td class="attendance_time"><%= attendance.work_end_time.strftime('%Y/%m/%d %H:%M:%S') %></td>
+    <% end %>
+    <td class="timestamp">
+      <%= time_ago_in_words(attendance.created_at) %> 前
+    </td>
+    <% if current_user == attendance.user %>
+      <td>
+        <%= link_to "編集", edit_attendance_path(attendance) %>
+      </td>
+      <td>
+        <%= link_to "削除", attendance, method: :delete, data: { confirm: "本当に削除しますか？" }%>
+      </td>
+    <% end %>
+  </tr>
+<% end %>

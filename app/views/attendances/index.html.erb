@@ -1,13 +1,49 @@
 <% provide(:title, "Attendances") %>
 
-<div class="wrapper">
+<div class="attendance-wrapper">
   <section class="attendance-area">
     <div class="current-time-content">
       <h2 class="current-month"><%= @year %>年<%= @month %>月<%= @day %>日</h2>
       <h3 id="showTime" class="current-time"></h3>
     </div>
     <div class="submit-content">
+      <%= form_with model: @attendance do |f| %>
+          <%= f.submit "タイムボタン", class: "btn btn-work" %>
+      <% end %>
     </div>
   </section>
+
+  <section class="attendance-status-area">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>名前</th>
+          <th>出社時刻</th>
+          <th>退勤時刻</th>
+          <th>作成日時</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'shared/attendance_status' %>
+      </tbody>
+  </table>
+  </section>
 </div>
-<script src="current_time.js"></script>
+<script>
+function set2(num) {
+  let ret;
+  if (num < 10) { ret = "0" + num; }
+  else { ret = num; }
+  return ret;
+}
+function showClock() {
+  const nowTime = new Date(); //現在日時
+  const nowHour = set2(nowTime.getHours()); //時間
+  const nowMin = set2(nowTime.getMinutes()); //分
+  const nowSec = set2(nowTime.getSeconds()); //秒
+  const msg = nowHour + "時" + nowMin + "分" + nowSec + "秒";
+  document.getElementById("showTime").innerHTML = msg;
+}
+setInterval('showClock()', 1000);
+
+</script>
