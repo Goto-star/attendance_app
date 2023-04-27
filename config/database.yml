@@ -22,4 +22,5 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['HEROKU_DATABASE_URL'] %>
+  pool: 5
