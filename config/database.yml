@@ -22,5 +22,6 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['HEROKU_DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: unicode
   pool: 5
