@@ -24,10 +24,6 @@
       <div class="field">
         <%= f.label :password %><br />
         <%= f.password_field :password, class: "form", autocomplete: "new-password" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %>文字以上</em>
-        <% end %>
       </div>
 
       <div class="field">
