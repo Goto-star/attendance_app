@@ -11,10 +11,8 @@
       <%= time_ago_in_words(attendance.created_at) %> 前
     </td>
     <% if current_user == attendance.user %>
-      <td>
+      <td class="button-table">
         <%= link_to "編集", edit_attendance_path(attendance) %>
-      </td>
-      <td>
         <%= link_to "削除", attendance, method: :delete, data: { confirm: "本当に削除しますか？" }%>
       </td>
     <% end %>

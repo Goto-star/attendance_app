@@ -1,4 +1,5 @@
 class AttendancesController < ApplicationController
+  before_action :authenticate_user!
   before_action :current_user, only: [:create, :destroy, :update, :edit]
 
   def index

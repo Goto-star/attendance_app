@@ -1,10 +1,13 @@
 <header id="header">
   <% if user_signed_in? %>
-    <%= link_to "Attendance", root_path, {class: "link app-title"} %>
+    <%= link_to "Attendance", attendances_path, {class: "link app-title"} %>
     <nav>
       <ul>
-        <li class="link"><%= current_user.name %><li>
-        <li><%= link_to 'setting', edit_user_registration_path, class: 'link' %></li>
+        <li><%= current_user.name %><li>
+        <% if current_user.admin_flg == true %>
+          <li><%= link_to 'AdminPage', rails_admin_path, class: 'link' %></li>
+        <% end %>
+        <li><%= link_to 'Setting', edit_user_registration_path, class: 'link' %></li>
         <li><%= link_to 'Logout', destroy_user_session_path, class: 'link', method: :delete %>
       </ul>
     </nav>
@@ -12,8 +15,8 @@
     <%= link_to "Attendance", root_path, {class: "link app-title"} %>
     <nav>
       <ul>
-        <li><%= link_to "Signup", new_user_registration_path, class: "link" %></li>
-        <li><%= link_to "Login", new_user_session_path, class: "link" %></li>
+        <li><%= link_to "Signup", new_user_registration_path, class: 'link' %></li>
+        <li><%= link_to "Login", new_user_session_path, class: 'link' %></li>
       </ul>
     </nav>
   <% end %>
